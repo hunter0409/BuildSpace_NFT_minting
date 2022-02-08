@@ -1,5 +1,9 @@
 require("@nomiclabs/hardhat-waffle");
 
+require('dotenv').config()
+
+// require('@nomiclabs/hardhat-ethers');
+// require("@nomiclabs/hardhat-etherscan");
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
@@ -18,4 +22,10 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: "0.8.4",
+  networks: {
+    ropsten: {
+      url: 'https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
+      accounts: [process.env.PRIV_KEY],
+    }
+  }
 };
