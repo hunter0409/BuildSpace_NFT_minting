@@ -1,5 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
-
+require("@nomiclabs/hardhat-etherscan");
 require('dotenv').config()
 
 // require('@nomiclabs/hardhat-ethers');
@@ -31,5 +31,10 @@ module.exports = {
       url: 'https://rinkeby.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161',
       accounts: [process.env.PRIV_KEY],
     }
+  },
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: "4JJ2Y7BXG684ZC26K94ABC81H7YNJ1WW6U",
   }
 };
