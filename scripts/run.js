@@ -11,6 +11,7 @@ const main = async () => {
     txn = await nftContract.makeAnEpicNFT()
 
     await txn.wait()
+
 };
 
 const runmain = async () => {
